@@ -4,15 +4,12 @@ pipeline {
     stages{
         stage('Build') {
             steps {
-                sh 'cd src'
-                sh 'ls'
-                sh 'javac com/helloworld/HelloWorld.java'
+                sh 'cd src && javac com/helloworld/HelloWorld.java'
             }
         }
         stage('Test') {
             steps {
-                sh 'cd src'
-                sh 'java com.helloworld.HelloWorld'
+                sh 'cd src && java com.helloworld.HelloWorld'
             }
         }
 
