@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'cd src'
+                sh 'ls'
                 sh 'javac com/helloworld/HelloWorld.java'
             }
         }
